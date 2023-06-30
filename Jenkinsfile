@@ -2,7 +2,7 @@ pipeline {
 
     tools{
 
-        maven 'maven3.9.3'
+        maven 'maven3.9.2'
     }
     agent any
 
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Bucey01/nextcloud-application-docker-pipeline.git']])
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Lion-Technology-Solutions/nextcloud-application-docker-pipeline.git']])
             }
         }
         
