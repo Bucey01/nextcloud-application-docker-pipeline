@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 184239464702.dkr.ecr.us-east-1.amazonaws.com'
-                    sh 'docker push 184239464702.dkr.ecr.us-east-1.amazonaws.com/rachel-nextcloud:$BUILD_NUMBER'
+                    sh 'sudo docker push 184239464702.dkr.ecr.us-east-1.amazonaws.com/rachel-nextcloud:$BUILD_NUMBER'
                     
                 }
             }
